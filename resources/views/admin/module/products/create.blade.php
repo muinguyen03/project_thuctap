@@ -87,76 +87,9 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group mb-3">
-                            <label class="form-label">Size</label><br>
-{{--                            @foreach($arrSize as $key => $item)--}}
-{{--                                <div class="form-check form-check-inline">--}}
-{{--                                    <input class="form-check-input" name="size[]" type="checkbox" id="{{ $item }}" value="{{$item}}" />--}}
-{{--                                    <label class="form-check-label" for="{{ $item }}">{{ $item }}</label>--}}
-{{--                                </div>--}}
-{{--                            @endforeach--}}
-                            @foreach($arrSize as $key => $item)
-                                <div class="form-check form-check-inline">
-                                    @if(in_array($item, old('size', [])))
-                                        <input class="form-check-input" name="size[]" type="checkbox" id="{{ $item }}" value="{{ $item }}" checked />
-                                    @else
-                                        <input class="form-check-input" name="size[]" type="checkbox" id="{{ $item }}" value="{{ $item }}" />
-                                    @endif
-                                    <label class="form-check-label" for="{{ $item }}">{{ $item }}</label>
-                                </div>
-                            @endforeach
-                            @if ($errors->has('size'))
-                                <div class="text-danger mb-3">
-                                    {{ $errors->first('size') }}
-                                </div>
-                            @endif
+                            <label class="form-label">Author</label><br>
+                            <input type="text" name="author" id="name" class="form-control " value="{{ old('name') }}">
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="form-group mb-3">
-                            <label class="form-label">Color</label><br>
-                            <input type="text" class="form-control" placeholder="Gray|White|Black" name="color" value="{{ old('color') }}">
-                            @if ($errors->has('color'))
-                                <div class="text-danger mb-3">
-                                    {{ $errors->first('color') }}
-                                </div>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card flex-fill">
-                        <div class="card-body">
-                            <div class="form-group mb-3">
-                                <label for="" class="form-label">Dimensions</label>
-                                <input type="text" name="dimensions" class="form-control" placeholder="110 x 33 x 100 cm" value="{{ old('dimensions') }}">
-                                @if ($errors->has('dimensions'))
-                                    <div class="text-danger mb-3">
-                                        {{ $errors->first('dimensions') }}
-                                    </div>
-                                @endif
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="" class="form-label">Materials</label>
-                                <input type="text" name="materials" class="form-control" placeholder="60% cotton" value="{{ old('materials') }}">
-                                @if ($errors->has('materials'))
-                                    <div class="text-danger mb-3">
-                                        {{ $errors->first('materials') }}
-                                    </div>
-                                @endif
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="" class="form-label">Weight</label>
-                                <input type="text" name="weight" class="form-control" placeholder="0.6" value="{{ old('weight') }}">
-                                @if ($errors->has('weight'))
-                                    <div class="text-danger mb-3">
-                                        {{ $errors->first('weight') }}
-                                    </div>
-                                @endif
-                            </div>
-                        </div>
-
                     </div>
                 </div>
                 <div class="card">
@@ -175,5 +108,4 @@
 
     </script>
 @endsection('content')
-<div class="card">--}}
 

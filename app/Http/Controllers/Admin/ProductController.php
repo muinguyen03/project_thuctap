@@ -147,8 +147,7 @@ class ProductController extends Controller
         }
 
         $arr = $request->input();
-        $colors = explode('|', $request->color);
-        $arr['color'] = $colors;
+        
         $arr['status'] = (integer)$request->status;
 
         $object->update($arr);

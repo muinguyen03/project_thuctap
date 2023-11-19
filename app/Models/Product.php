@@ -21,11 +21,7 @@ class Product extends Eloquent
         'price',
         'category_id',
         'image',
-        'color',
-        'dimensions',
-        'materials',
-        'size',
-        'weight',
+        'author',
         'description',
         'description_sort',
         'deleted_at'
